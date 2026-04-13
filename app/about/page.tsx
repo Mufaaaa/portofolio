@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Briefcase, GraduationCap, Heart } from "lucide-react";
+import { Code2, Database, Wrench, Award } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -12,20 +12,41 @@ const fadeUp = {
   }),
 };
 
-const skills = [
-  { name: "React / Next.js", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "UI/UX Design", level: 85 },
-  { name: "Node.js", level: 88 },
-  { name: "Figma", level: 80 },
+const coreCompetencies = [
+  "Frontend Architecture with Next.js",
+  "Backend Development with Node.js and Laravel",
+  "REST API Design and Integration",
+  "Database Management with MySQL",
+  "AI Integration for Web Applications",
 ];
 
-const stats = [
-  { icon: Briefcase, value: "50+", label: "Completed Projects" },
-  { icon: Heart, value: "30+", label: "Satisfied Clients" },
-  { icon: Award, value: "5+", label: "Years of Experience" },
-  { icon: GraduationCap, value: "10+", label: "Certifications" },
-];
+const techStack = {
+  frontend: [
+    "HTML/CSS",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+  
+  ],
+  backend: [
+    "Laravel",
+    "Node.js",
+    "REST APIs",
+    "MySQL",
+  ],
+  tools: [
+    "Git",
+    "Vercel",
+    "Cloudflare",
+    "Linux",
+  ],
+  other: [
+    "UI/UX Design",
+    "System Design",
+    "AI Integration",
+    "Agile",
+  ],
+};
 
 export default function TentangPage() {
   return (
@@ -64,16 +85,25 @@ export default function TentangPage() {
             transition={{ duration: 0.7 }}
           >
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground font-body">
-              I am a designer and developer who is passionate about creating
-              meaningful digital experiences. With more than five years of
-              experience, I have helped businesses turn their digital vision
-              into practical products.
+              I am a Full Stack Developer with a primary focus on frontend and
+              backend web development. Over the course of four academic
+              semesters, I contributed to the PBL (Project Based Learning)
+              initiative by supporting the development of scalable applications
+              and practical digital solutions.
+            </p>
+
+            <p className="mb-6 text-lg leading-relaxed text-muted-foreground font-body">
+              My technical experience includes modern frontend technologies such
+              as React and Next.js, as well as backend implementation with
+              Node.js and Laravel. I emphasize maintainable code structure,
+              performance, and clear system design in each project.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground font-body">
-              I believe great design is not only about aesthetics, but also
-              about solving real problems and building intuitive user
-              experiences. Every project is an opportunity to learn and grow.
+              I am also currently studying AI integration for web applications
+              to expand solution capabilities and improve user experience. This
+              remains an active learning area, and I continuously improve
+              through project-based practice.
             </p>
           </motion.div>
 
@@ -84,55 +114,156 @@ export default function TentangPage() {
             transition={{ duration: 0.7 }}
             className="space-y-6"
           >
-            {skills.map((skill, i) => (
-              <div key={skill.name}>
-                <div className="mb-2 flex justify-between">
-                  <span className="text-sm font-medium font-body">
-                    {skill.name}
-                  </span>
-                  <span className="text-sm text-muted-foreground font-body">
-                    {skill.level}%
-                  </span>
-                </div>
-
-                <div className="h-2 overflow-hidden rounded-full bg-secondary">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: i * 0.1 }}
-                    className="h-full rounded-full bg-primary"
-                  />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="bg-card/50 px-6 py-20">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 md:grid-cols-4">
-          {stats.map((stat, i) => (
             <motion.div
-              key={stat.label}
-              custom={i}
+              custom={2}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-center"
+              className="rounded-lg border border-border/50 bg-card/50 p-6"
             >
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                <stat.icon size={24} className="text-primary" />
-              </div>
-              <p className="text-3xl font-bold text-gradient-gold">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-sm text-muted-foreground font-body">
-                {stat.label}
-              </p>
+              <h3 className="mb-4 text-lg font-semibold">Core Competencies</h3>
+              <ul className="flex flex-wrap gap-2">
+                {coreCompetencies.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium leading-relaxed text-muted-foreground font-body"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
-          ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Skills & Expertise Section */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <motion.p
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-4 text-sm uppercase tracking-[0.3em] text-primary font-body"
+          >
+            Skills & Expertise
+          </motion.p>
+
+          <motion.h2
+            custom={1}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-16 text-4xl font-bold md:text-5xl"
+          >
+            My Tech Stack
+          </motion.h2>
+
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            {/* Frontend */}
+            <motion.div
+              custom={2}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-lg border border-border/50 bg-card/50 p-6"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <Code2 size={24} className="text-primary" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold">Frontend</h3>
+              <ul className="flex flex-wrap gap-2">
+                {techStack.frontend.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Backend */}
+            <motion.div
+              custom={3}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-lg border border-border/50 bg-card/50 p-6"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <Database size={24} className="text-primary" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold">Backend</h3>
+              <ul className="flex flex-wrap gap-2">
+                {techStack.backend.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Tools & Infra */}
+            <motion.div
+              custom={4}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-lg border border-border/50 bg-card/50 p-6"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <Wrench size={24} className="text-primary" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold">Tools & Infra</h3>
+              <ul className="flex flex-wrap gap-2">
+                {techStack.tools.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Other */}
+            <motion.div
+              custom={5}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="rounded-lg border border-border/50 bg-card/50 p-6"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <Award size={24} className="text-primary" />
+              </div>
+              <h3 className="mb-4 text-xl font-bold">Other</h3>
+              <ul className="flex flex-wrap gap-2">
+                {techStack.other.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </div>
       </section>
     </main>

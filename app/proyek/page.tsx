@@ -6,7 +6,7 @@ const projects = [
 		title: "Construction Company Profile Website",
 		category: "Company Profile",
 		description:
-			"A professional company profile website featuring service pages, project showcases, and lead generation forms.",
+			"A professional company profile website featuring service pages, project showcases, and lead-generation forms.",
 		tech: ["Next.js", "TypeScript", "Tailwind CSS"],
 		liveUrl: "#",
 	},
@@ -22,7 +22,7 @@ const projects = [
 		title: "Photo Studio Booking System",
 		category: "Web App",
 		description:
-			"A booking web app with schedule management, time-slot control, booking status tracking, and an admin dashboard.",
+			"A booking web application with schedule management, time-slot control, booking status tracking, and an admin dashboard.",
 		tech: ["Next.js", "Node.js", "PostgreSQL"],
 		liveUrl: "#",
 	},
@@ -46,7 +46,7 @@ const projects = [
 		title: "Sales Monitoring Dashboard",
 		category: "Dashboard",
 		description:
-			"A sales analytics dashboard with KPI summaries, performance charts, and flexible period-based filtering.",
+			"A sales analytics dashboard with KPI summaries, performance charts, and flexible date-range filtering.",
 		tech: ["React", "Recharts", "Tailwind CSS"],
 		liveUrl: "#",
 	},
@@ -58,14 +58,13 @@ export default function ProyekPage() {
 			<section className="mx-auto max-w-6xl">
 				<div className="mb-14 text-center">
 					<p className="mb-3 text-sm uppercase tracking-[0.3em] text-yellow-400">
-						Project Portfolio
+						Portfolio
 					</p>
 					<h1 className="text-4xl font-bold md:text-5xl">
-						Websites I Have Delivered
+						Selected Projects
 					</h1>
 					<p className="mx-auto mt-4 max-w-2xl text-gray-300">
-						A curated collection of websites built for diverse business needs,
-						from company profiles and landing pages to full web applications.
+						A curated selection of projects highlighting my experience in full-stack development, product execution, and user-focused solutions.
 					</p>
 				</div>
 
@@ -110,7 +109,7 @@ export default function ProyekPage() {
 									className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-yellow-300/50 hover:text-yellow-300"
 								>
 									<Monitor size={16} />
-									Preview UI
+									UI Preview
 								</button>
 							</div>
 						</article>
