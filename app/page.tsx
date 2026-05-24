@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, Palette, Smartphone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const fadeUp = {
   hidden: {

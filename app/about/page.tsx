@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code2, Database, Wrench, Award } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -47,6 +48,9 @@ const techStack = {
     "Agile",
   ],
 };
+
+const aboutBadgeClass =
+  "border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body";
 
 export default function TentangPage() {
   return (
@@ -125,11 +129,10 @@ export default function TentangPage() {
               <h3 className="mb-4 text-lg font-semibold">Core Competencies</h3>
               <ul className="flex flex-wrap gap-2">
                 {coreCompetencies.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium leading-relaxed text-muted-foreground font-body"
-                  >
-                    {item}
+                  <li key={item}>
+                    <Badge variant="outline" className={`${aboutBadgeClass} leading-relaxed`}>
+                      {item}
+                    </Badge>
                   </li>
                 ))}
               </ul>
@@ -179,11 +182,10 @@ export default function TentangPage() {
               <h3 className="mb-4 text-xl font-bold">Frontend</h3>
               <ul className="flex flex-wrap gap-2">
                 {techStack.frontend.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
-                  >
-                    {tech}
+                  <li key={tech}>
+                    <Badge variant="outline" className={aboutBadgeClass}>
+                      {tech}
+                    </Badge>
                   </li>
                 ))}
               </ul>
@@ -204,11 +206,10 @@ export default function TentangPage() {
               <h3 className="mb-4 text-xl font-bold">Backend</h3>
               <ul className="flex flex-wrap gap-2">
                 {techStack.backend.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
-                  >
-                    {tech}
+                  <li key={tech}>
+                    <Badge variant="outline" className={aboutBadgeClass}>
+                      {tech}
+                    </Badge>
                   </li>
                 ))}
               </ul>
@@ -229,11 +230,10 @@ export default function TentangPage() {
               <h3 className="mb-4 text-xl font-bold">Tools & Infra</h3>
               <ul className="flex flex-wrap gap-2">
                 {techStack.tools.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
-                  >
-                    {tech}
+                  <li key={tech}>
+                    <Badge variant="outline" className={aboutBadgeClass}>
+                      {tech}
+                    </Badge>
                   </li>
                 ))}
               </ul>
@@ -254,11 +254,10 @@ export default function TentangPage() {
               <h3 className="mb-4 text-xl font-bold">Other</h3>
               <ul className="flex flex-wrap gap-2">
                 {techStack.other.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-md border border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body"
-                  >
-                    {tech}
+                  <li key={tech}>
+                    <Badge variant="outline" className={aboutBadgeClass}>
+                      {tech}
+                    </Badge>
                   </li>
                 ))}
               </ul>

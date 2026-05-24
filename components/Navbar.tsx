@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const links = [
   { href: "/", label: "Home" },
@@ -145,12 +146,13 @@ export function Navbar() {
         </button>
 
         <div className="hidden md:block">
-          <Link
-            href="/#contact"
-            className="rounded-lg border border-amber-300/50 px-4 py-2 text-sm font-semibold text-amber-300 transition-colors hover:bg-amber-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40"
+          <Button
+            asChild
+            variant="outline"
+            className="border-amber-300/60 bg-black text-amber-300 hover:bg-amber-300/10 hover:text-amber-200"
           >
-            Consultation
-          </Link>
+            <Link href="/#contact">Consultation</Link>
+          </Button>
         </div>
       </nav>
 
