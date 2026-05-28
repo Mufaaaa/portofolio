@@ -14,42 +14,42 @@ type Project = {
 const projects: Project[] = [
 	{
 		slug: "penyewaan-alat-camping",
-		title: "Aplikasi Penyewaan Barang Alat Camping",
+		title: "Camping Equipment Rental Management System",
 		category: "Web App",
 		description:
-			"Sistem penyewaan alat camping berbasis PHP native dengan alur pemesanan, pengelolaan stok, dan pencatatan transaksi yang sederhana tapi siap dipakai operasional.",
+			"A PHP-based web rental platform for camping equipment with streamlined booking workflows, inventory control, and transaction tracking designed for day-to-day operations.",
 		stack: ["PHP Native", "MySQL", "Bootstrap 5", "JavaScript", "AJAX", "SweetAlert2"],
-		highlights: ["Kelola stok alat", "Booking dan pengembalian", "Dashboard admin"],
+		highlights: ["Inventory management", "Booking and returns flow", "Administrative dashboard"],
 		accent: "from-amber-400/20 to-yellow-500/5",
 	},
 	{
 		slug: "sewa-baju-adat-nikah",
-		title: "Aplikasi Penyewaan Baju Adat Nikah",
+		title: "Traditional Wedding Attire Rental Platform",
 		category: "Web App",
 		description:
-			"Aplikasi penyewaan baju adat nikah berbasis web dengan dashboard admin, alur transaksi, notifikasi pembayaran, dan manajemen data yang lebih rapi.",
+			"A web-based rental application for traditional wedding attire featuring an admin dashboard, transaction workflows, payment notifications, and structured data management.",
 		stack: ["Laravel", "Blade", "MySQL", "Livewire", "Midtrans", "Filament", "Tailwind CSS"],
-		highlights: ["Pembayaran Midtrans", "Admin panel Filament", "Interaksi real-time dengan Livewire"],
+		highlights: ["Midtrans payment integration", "Filament admin panel", "Livewire real-time interactions"],
 		accent: "from-orange-400/20 to-rose-500/5",
 	},
 	{
 		slug: "deteksi-dini-asma",
-		title: "Sistem Pendukung Keputusan Deteksi Dini Penyakit Asma",
+		title: "Early Asthma Detection Decision Support System",
 		category: "Decision Support",
 		description:
-			"Sistem pendukung keputusan untuk membantu deteksi dini asma dengan integrasi Laravel dan FastAPI yang memanfaatkan model Random Forest untuk prediksi.",
+			"A decision support system for early asthma detection that integrates Laravel and FastAPI, leveraging a Random Forest model for prediction.",
 		stack: ["Laravel", "Blade", "MySQL", "Filament", "FastAPI", "Random Forest", "Python"],
-		highlights: ["Prediksi berbasis ML", "Panel pengelolaan data", "API FastAPI untuk inferensi"],
+		highlights: ["ML-based prediction", "Data management panel", "FastAPI inference service"],
 		accent: "from-emerald-400/20 to-cyan-500/5",
 	},
 	{
 		slug: "eduzi-gizi-stunting",
-		title: "Eduzi - Media Edukasi Gizi Digital dalam Pencegahan Stunting",
+		title: "Eduzi - Digital Nutrition Education for Stunting Prevention",
 		category: "Digital Learning",
 		description:
-			"Platform edukasi gizi digital untuk pencegahan stunting dengan tampilan informatif, pengelolaan konten, dan dukungan machine learning untuk fitur cerdas.",
+			"A digital nutrition education platform for stunting prevention with informative content delivery, structured content management, and machine learning-powered intelligent features.",
 		stack: ["Laravel", "Blade", "MySQL", "Filament", "FastAPI", "Machine Learning", "Python"],
-		highlights: ["Konten edukasi gizi", "Integrasi FastAPI", "Fitur cerdas berbasis ML"],
+		highlights: ["Nutrition-focused learning content", "FastAPI integration", "ML-powered intelligent features"],
 		accent: "from-sky-400/20 to-indigo-500/5",
 	},
 ];
@@ -63,24 +63,24 @@ export default function ProyekPage() {
 						Portfolio Projects
 					</p>
 					<h1 className="text-4xl font-bold leading-tight md:text-5xl">
-						Empat Project Utama yang Bisa Dibuka Detailnya Satu per Satu
+						Featured Projects with Dedicated Detail Pages
 					</h1>
 					<p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-300 md:text-base">
-						Halaman ini menampilkan ringkasan 4 project utama. Setiap kartu sudah disiapkan ke halaman detail per project, jadi nanti tinggal isi isiannya lebih lengkap tanpa mengubah struktur besar halaman.
+						This page highlights four core projects. Each card is connected to a dedicated detail page, making it easy to expand project content over time while keeping the overall structure consistent.
 					</p>
 				</div>
 
 				<div className="mb-10 grid gap-4 sm:grid-cols-3">
 					<div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-						<p className="text-sm text-zinc-400">Total Project</p>
+						<p className="text-sm text-zinc-400">Total Projects</p>
 						<p className="mt-2 text-3xl font-bold text-yellow-300">4</p>
 					</div>
 					<div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-						<p className="text-sm text-zinc-400">Detail Page</p>
+						<p className="text-sm text-zinc-400">Detail Pages</p>
 						<p className="mt-2 text-3xl font-bold text-yellow-300">Ready</p>
 					</div>
 					<div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-						<p className="text-sm text-zinc-400">Stack Utama</p>
+						<p className="text-sm text-zinc-400">Core Stack</p>
 						<p className="mt-2 text-3xl font-bold text-yellow-300">Web + ML</p>
 					</div>
 				</div>
@@ -129,7 +129,7 @@ export default function ProyekPage() {
 										href={`/proyek/${project.slug}`}
 										className="inline-flex items-center gap-2 rounded-xl bg-yellow-400 px-4 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-90"
 									>
-										Lihat Detail
+										View Details
 										<ChevronRight size={16} />
 									</Link>
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Palette, Smartphone } from "lucide-react";
+import { ArrowRight, BrainCircuit, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const fadeUp = {
@@ -28,14 +28,9 @@ const services = [
     desc: "Building modern, responsive web applications with up-to-date technologies.",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    desc: "Designing clear, elegant interfaces with intuitive user experiences.",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App",
-    desc: "Developing fast, polished mobile applications with a seamless feel.",
+    icon: BrainCircuit,
+    title: "AI Engineering",
+    desc: "Integrating AI into web products to deliver smarter, more adaptive user experiences.",
   },
 ];
 
@@ -150,7 +145,7 @@ export default function HomePage() {
             </h2>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -180,8 +175,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl rounded-2xl border border-yellow-400/30 bg-white/5 px-6 py-10 shadow-xl shadow-black/30 md:px-10">
             <h2 className="mb-4 text-4xl font-bold">Contact Me</h2>
             <p className="mb-8 text-gray-300">
-              Ready to collaborate on your next website, design, or application
-              project.
+              Ready to collaborate on your next web or AI project.
             </p>
             <a
               href="/kontak"
