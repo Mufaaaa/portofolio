@@ -5,7 +5,7 @@ export function Footer() {
 		<footer className="border-t border-amber-300/20 bg-black py-8 text-amber-200 [font-family:var(--font-poppins)]">
 			<div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 text-center md:flex-row md:text-left">
 				<div>
-					<p className="text-base font-semibold text-amber-300">Faiq Mufaaaa.</p>
+					<p className="text-base font-semibold text-amber-300">Mufaaaa.</p>
 					<p className="text-sm text-amber-200/80">© 2026 All rights reserved.</p>
 				</div>
 

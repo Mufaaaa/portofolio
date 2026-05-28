@@ -111,7 +111,7 @@ export function Navbar() {
           href="/"
           className="rounded-md text-lg font-bold tracking-tight text-amber-300 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40"
         >
-          Faiq Mufaaaa.
+          Mufaaaa.
         </Link>
 
         <div className="hidden items-center gap-2 md:flex">
