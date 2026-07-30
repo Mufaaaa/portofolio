@@ -29,8 +29,8 @@ const projectDetails: Record<string, ProjectDetail> = {
 			{ src: "/images/rentrail/Login.png", alt: "Camping rental app login page" },
 		],
 		overview:
-			"Built to simplify manual rental operations by centralizing stock visibility, booking, and transaction records in one web interface.",
-		timeline: "Planning, core feature development, integration testing, and deployment preparation.",
+			"WUW was designed to help bridal rental businesses manage product browsing, reservation flow, checkout, and transaction records in one structured platform.",
+		timeline: "Discovery and UX planning, catalog and cart flow implementation, Midtrans integration, admin workflow setup, and deployment testing.",
 	},
 	"sewa-baju-adat-nikah": {
 		title: "Traditional Wedding Attire Rental Platform",
@@ -46,8 +46,8 @@ const projectDetails: Record<string, ProjectDetail> = {
 			{ src: "/images/wuw/riwayat.png", alt: "Rental history view" },
 		],
 		overview:
-			"Designed to improve rental business operations through clear catalog browsing, smooth checkout, and reliable transaction management.",
-		timeline: "UX planning, payment gateway integration, admin workflow setup, and production rollout.",
+			"WUW was designed to help bridal rental businesses manage product browsing, reservation flow, checkout, and transaction records in one structured platform.",
+		timeline: "Discovery and UX planning, catalog and cart flow implementation, Midtrans integration, admin workflow setup, and deployment testing.",
 	},
 	"deteksi-dini-asma": {
 		title: "Early Asthma Detection Decision Support System",
@@ -66,8 +66,8 @@ const projectDetails: Record<string, ProjectDetail> = {
 			},
 		],
 		overview:
-			"Developed to support faster preliminary screening by translating symptom inputs into data-driven risk predictions.",
-		timeline: "Data preparation, model training and validation, API integration, and application testing.",
+			"AsthmaCare was developed to support early preliminary screening by turning symptom input into data-driven asthma risk predictions through a web interface and model-backed inference service.",
+		timeline: "Clinical requirement analysis, dataset preparation, model training and validation, FastAPI integration, and end-to-end application testing.",
 	},
 	"eduzi-gizi-stunting": {
 		title: "Eduzi - Digital Nutrition Education for Stunting Prevention",
@@ -76,9 +76,16 @@ const projectDetails: Record<string, ProjectDetail> = {
 			"A digital nutrition education platform for stunting prevention with structured content delivery and intelligent features powered by machine learning.",
 		stack: ["Laravel", "Blade", "MySQL", "Filament", "FastAPI", "Machine Learning", "Python"],
 		highlights: ["Nutrition-focused educational content", "ML-enhanced intelligent features", "Content management admin panel"],
+		images: [
+			{ src: "/images/eduzi/utama.png", alt: "Eduzi landing page" },
+			{ src: "/images/eduzi/artikel.png", alt: "Eduzi article page" },
+			{ src: "/images/eduzi/kalkulator.png", alt: "Eduzi nutrition calculator" },
+			{ src: "/images/eduzi/komunitas.png", alt: "Eduzi community page" },
+			{ src: "/images/eduzi/hasil.png", alt: "Eduzi prediction result page" },
+		],
 		overview:
-			"Created to improve access to practical nutrition knowledge for families and communities through an accessible digital learning experience.",
-		timeline: "Requirements research, content architecture, core feature implementation, and system integration.",
+			"Eduzi was created to make practical nutrition knowledge easier to access for families and communities through educational content, interactive tools, and ML-assisted guidance.",
+		timeline: "Needs research, content structure planning, feature development, machine learning integration, and system refinement.",
 	},
 };
 
