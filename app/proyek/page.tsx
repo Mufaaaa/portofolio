@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ChevronRight, Globe, Monitor } from "lucide-react";
+import { ChevronRight, Globe } from "lucide-react";
 
 type Project = {
 	slug: string;
 	title: string;
 	category: string;
 	description: string;
+	liveDemoUrl?: string;
 	stack: string[];
 	highlights: string[];
 	accent: string;
@@ -48,6 +49,7 @@ const projects: Project[] = [
 		category: "Digital Learning",
 		description:
 			"A digital nutrition education platform for stunting prevention with informative content delivery, structured content management, and machine learning-powered intelligent features.",
+		liveDemoUrl: "https://uphold-crayfish-gleaming.ngrok-free.dev/",
 		stack: ["Laravel", "Blade", "MySQL", "Filament", "FastAPI", "Machine Learning", "Python"],
 		highlights: ["Nutrition-focused learning content", "FastAPI integration", "ML-powered intelligent features"],
 		accent: "from-indigo-400/20 to-blue-700/5",
@@ -89,22 +91,22 @@ export default function ProyekPage() {
 					{projects.map((project) => (
 						<article
 							key={project.slug}
-							className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/35 hover:bg-white/[0.08]"
+							className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/35 hover:bg-white/[0.08]"
 						>
 							<div className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
-							<div className="relative">
+							<div className="relative flex h-full flex-col">
 								<div className="mb-4 inline-flex rounded-full border border-blue-400/30 bg-slate-900/40 px-3 py-1 text-xs font-semibold tracking-wide text-blue-300">
 									{project.category}
 								</div>
 
-								<h2 className="text-2xl font-bold leading-tight text-white">
+								<h2 className="min-h-[4.5rem] text-2xl font-bold leading-tight text-white md:min-h-[5.5rem]">
 									{project.title}
 								</h2>
-								<p className="mt-3 text-sm leading-7 text-slate-300">
+								<p className="mt-3 min-h-[6.5rem] text-sm leading-7 text-slate-300 md:min-h-[7rem]">
 									{project.description}
 								</p>
 
-								<div className="mt-5 space-y-2 text-sm text-slate-300">
+								<div className="mt-5 min-h-[5.75rem] space-y-2 text-sm text-slate-300">
 									{project.highlights.map((highlight) => (
 										<div key={highlight} className="flex items-start gap-2">
 											<span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-300" />
@@ -113,7 +115,7 @@ export default function ProyekPage() {
 									))}
 								</div>
 
-								<div className="mt-5 flex flex-wrap gap-2">
+								<div className="mt-5 min-h-[5.5rem] flex flex-wrap gap-2">
 									{project.stack.map((stack) => (
 										<span
 											key={`${project.slug}-${stack}`}
@@ -124,7 +126,7 @@ export default function ProyekPage() {
 									))}
 								</div>
 
-								<div className="mt-6 flex flex-wrap items-center gap-3">
+								<div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
 									<Link
 										href={`/proyek/${project.slug}`}
 										className="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
@@ -134,19 +136,15 @@ export default function ProyekPage() {
 									</Link>
 
 									<Link
-										href="#"
+										href={project.liveDemoUrl ?? "#"}
+										target={project.liveDemoUrl ? "_blank" : undefined}
+										rel={project.liveDemoUrl ? "noreferrer noopener" : undefined}
 										className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-blue-300/50 hover:text-blue-300"
 									>
 										<Globe size={16} />
 										Live Demo
 									</Link>
 
-									<button
-										type="button"
-										className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-blue-300/50 hover:text-blue-300"								>
-									<Monitor size={16} />
-									UI Preview
-								</button>
 							</div>
 						</div>
 						</article>

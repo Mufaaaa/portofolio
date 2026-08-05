@@ -7,6 +7,7 @@ type ProjectDetail = {
 	title: string;
 	category: string;
 	description: string;
+	liveDemoUrl?: string;
 	stack: string[];
 	highlights: string[];
 	images?: { src: string; alt: string }[];
@@ -74,6 +75,7 @@ const projectDetails: Record<string, ProjectDetail> = {
 		category: "Digital Learning",
 		description:
 			"A digital nutrition education platform for stunting prevention with structured content delivery and intelligent features powered by machine learning.",
+		liveDemoUrl: "https://uphold-crayfish-gleaming.ngrok-free.dev/",
 		stack: ["Laravel", "Blade", "MySQL", "Filament", "FastAPI", "Machine Learning", "Python"],
 		highlights: ["Nutrition-focused educational content", "ML-enhanced intelligent features", "Content management admin panel"],
 		images: [
@@ -188,9 +190,21 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 							))}
 						</div>
 
+						{project.liveDemoUrl ? (
+							<a
+								href={project.liveDemoUrl}
+								target="_blank"
+								rel="noreferrer noopener"
+								className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+							>
+								Live Demo
+								<ChevronRight size={16} />
+							</a>
+						) : null}
+
 						<Link
 							href="/proyek"
-							className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+							className="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-blue-300/50 hover:text-blue-300"
 						>
 							<ChevronRight size={16} />
 							View other projects
