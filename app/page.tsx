@@ -106,9 +106,9 @@ export default function HomePage() {
             animate="visible"
             className="mx-auto"
           >
-            <div className="relative h-72 w-56 overflow-hidden rounded-2xl border-4 border-blue-400/70 shadow-2xl shadow-blue-400/10 md:h-96 md:w-72">
+            <div className="relative h-72 w-56 overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/20 md:h-96 md:w-72">
               <Image
-                src="/images/diri.jpeg"
+                src="/images/foto diri.jpeg"
                 alt="Portrait of Muhammad Faiq"
                 fill
                 className="object-cover"
