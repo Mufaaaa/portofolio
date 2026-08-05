@@ -115,7 +115,7 @@ export default function ProyekPage() {
 									))}
 								</div>
 
-								<div className="mt-5 min-h-[5.5rem] flex flex-wrap gap-2">
+								<div className="mt-5 flex flex-wrap gap-2">
 									{project.stack.map((stack) => (
 										<span
 											key={`${project.slug}-${stack}`}
