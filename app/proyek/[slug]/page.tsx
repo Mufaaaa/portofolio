@@ -104,11 +104,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 	}
 
 	return (
-		<main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.12),_transparent_34%),linear-gradient(180deg,_#090909_0%,_#000000_100%)] px-6 py-24 text-white">
+		<main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.16),_transparent_34%),linear-gradient(180deg,_#07111f_0%,_#020617_100%)] px-6 py-24 text-white">
 			<section className="mx-auto max-w-5xl">
 				<Link
 					href="/proyek"
-					className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-200 transition-colors hover:border-yellow-300/40 hover:text-yellow-300"
+					className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition-colors hover:border-blue-300/40 hover:text-blue-300"
 				>
 					<ArrowLeft size={16} />
 					Back to projects
@@ -116,13 +116,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
 				<div className="mt-8 grid gap-8 lg:grid-cols-[1.35fr_0.85fr]">
 					<div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-						<p className="text-sm uppercase tracking-[0.3em] text-yellow-400">Project Details</p>
+						<p className="text-sm uppercase tracking-[0.3em] text-blue-400">Project Details</p>
 						<h1 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">{project.title}</h1>
-						<p className="mt-4 text-sm leading-7 text-zinc-300 md:text-base">{project.description}</p>
+						<p className="mt-4 text-sm leading-7 text-slate-300 md:text-base">{project.description}</p>
 
 						<div className="mt-6 flex flex-wrap gap-2">
 							{project.stack.map((item) => (
-								<span key={item} className="rounded-full border border-white/10 bg-black/35 px-3 py-1 text-xs text-zinc-200">
+								<span key={item} className="rounded-full border border-white/10 bg-slate-900/45 px-3 py-1 text-xs text-slate-200">
 									{item}
 								</span>
 							))}
@@ -130,7 +130,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
 						<div className="mt-8 space-y-5">
 								{project.images ? (
-									<div className="rounded-3xl border border-white/10 bg-black/20 p-4 sm:p-5">
+									<div className="rounded-3xl border border-white/10 bg-slate-900/30 p-4 sm:p-5">
 										<h2 className="text-lg font-bold text-white">Application Gallery</h2>
 
 										<div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -141,12 +141,12 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 													target="_blank"
 													rel="noreferrer noopener"
 													aria-label={`Open ${image.alt}`}
-													className="group block overflow-hidden rounded-2xl border border-white/10 bg-black/30 transition-transform duration-300 hover:-translate-y-0.5"
+													className="group block overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 transition-transform duration-300 hover:-translate-y-0.5"
 												>
 													<div className="relative aspect-[4/3] w-full">
 														<Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
 													</div>
-													<div className="border-t border-white/10 px-4 py-3 text-xs text-zinc-300">
+													<div className="border-t border-white/10 px-4 py-3 text-xs text-slate-300">
 														{image.alt}
 													</div>
 												</Link>
@@ -155,34 +155,34 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 									</div>
 								) : null}
 
-							<div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/25 p-4">
-								<FileText className="mt-0.5 shrink-0 text-yellow-300" size={18} />
+							<div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-900/30 p-4">
+								<FileText className="mt-0.5 shrink-0 text-blue-300" size={18} />
 								<div>
 									<p className="text-sm font-semibold text-white">Overview</p>
-									<p className="mt-1 text-sm leading-7 text-zinc-300">{project.overview}</p>
+									<p className="mt-1 text-sm leading-7 text-slate-300">{project.overview}</p>
 								</div>
 							</div>
 
-							<div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/25 p-4">
-								<Layers3 className="mt-0.5 shrink-0 text-yellow-300" size={18} />
+							<div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-900/30 p-4">
+								<Layers3 className="mt-0.5 shrink-0 text-blue-300" size={18} />
 								<div>
 									<p className="text-sm font-semibold text-white">Timeline</p>
-									<p className="mt-1 text-sm leading-7 text-zinc-300">{project.timeline}</p>
+									<p className="mt-1 text-sm leading-7 text-slate-300">{project.timeline}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<aside className="rounded-3xl border border-white/10 bg-white/5 p-8">
-						<div className="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-xs font-semibold text-yellow-300">
+						<div className="inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-300">
 							{project.category}
 						</div>
 
 						<h2 className="mt-5 text-xl font-bold text-white">Project Highlights</h2>
-						<div className="mt-4 space-y-3 text-sm text-zinc-300">
+						<div className="mt-4 space-y-3 text-sm text-slate-300">
 							{project.highlights.map((item) => (
 								<div key={item} className="flex items-start gap-2">
-									<span className="mt-2 h-1.5 w-1.5 rounded-full bg-yellow-300" />
+									<span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-300" />
 									<span>{item}</span>
 								</div>
 							))}
@@ -190,7 +190,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
 						<Link
 							href="/proyek"
-							className="mt-8 inline-flex items-center gap-2 rounded-xl bg-yellow-400 px-4 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-90"
+							className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
 						>
 							<ChevronRight size={16} />
 							View other projects

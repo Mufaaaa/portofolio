@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 const links = [
   { href: "/", label: "Home" },
@@ -105,11 +104,11 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-amber-300/20 bg-black/95 backdrop-blur-md [font-family:var(--font-poppins)]">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-blue-400/20 bg-slate-950/95 backdrop-blur-md [font-family:var(--font-poppins)]">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/"
-          className="rounded-md text-lg font-bold tracking-tight text-amber-300 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40"
+          className="rounded-md text-lg font-bold tracking-tight text-blue-300 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/40"
         >
           Mufaaaa.
         </Link>
@@ -122,10 +121,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40 ${
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/40 ${
                   active
-                    ? "text-amber-300 underline decoration-amber-300/80 underline-offset-8"
-                    : "text-amber-200/80 hover:text-amber-300"
+                    ? "text-blue-300 underline decoration-blue-300/80 underline-offset-8"
+                    : "text-slate-300 hover:text-blue-300"
                 }`}
               >
                 {link.label}
@@ -136,7 +135,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-amber-300 transition-colors hover:bg-amber-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-blue-300 transition-colors hover:bg-blue-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/40 md:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -145,15 +144,6 @@ export function Navbar() {
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className="hidden md:block">
-          <Button
-            asChild
-            variant="outline"
-            className="border-amber-300/60 bg-black text-amber-300 hover:bg-amber-300/10 hover:text-amber-200"
-          >
-            <Link href="/#contact">Consultation</Link>
-          </Button>
-        </div>
       </nav>
 
       <AnimatePresence>
@@ -162,7 +152,7 @@ export function Navbar() {
             <motion.button
               type="button"
               aria-label="Close menu"
-              className="fixed inset-0 z-40 bg-black/30 md:hidden"
+              className="fixed inset-0 z-40 bg-slate-950/40 md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -174,7 +164,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.18 }}
-              className="relative z-50 border-t border-white/10 bg-black px-4 pb-5 pt-3 md:hidden"
+              className="relative z-50 border-t border-white/10 bg-slate-950 px-4 pb-5 pt-3 md:hidden"
             >
               <div className="mx-auto flex w-full max-w-6xl flex-col gap-1">
                 {links.map((link) => {
@@ -187,8 +177,8 @@ export function Navbar() {
                       onClick={() => setOpen(false)}
                       className={`rounded-lg px-3 py-3 text-sm font-medium transition-colors ${
                         active
-                          ? "text-amber-300 underline decoration-amber-300/80 underline-offset-8"
-                          : "text-amber-200/80 hover:bg-amber-300/10 hover:text-amber-300"
+                          ? "text-blue-300 underline decoration-blue-300/80 underline-offset-8"
+                          : "text-slate-300 hover:bg-blue-400/10 hover:text-blue-300"
                       }`}
                     >
                       {link.label}
@@ -199,7 +189,7 @@ export function Navbar() {
                 <Link
                   href="/#contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex items-center justify-center rounded-lg border border-amber-300/50 px-4 py-3 text-sm font-semibold text-amber-300 transition-colors hover:bg-amber-300/10"
+                  className="mt-2 inline-flex items-center justify-center rounded-lg border border-blue-400/50 px-4 py-3 text-sm font-semibold text-blue-300 transition-colors hover:bg-blue-400/10"
                 >
                   Start a Project
                 </Link>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, Code2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const fadeUp = {
   hidden: {
@@ -38,16 +37,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Hero background"
-            fill
-            priority
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.28),_transparent_38%),linear-gradient(135deg,_#020617_0%,_#0f172a_55%,_#111827_100%)]" />
+        <div className="absolute inset-0 bg-slate-950/35" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-6 text-white md:grid-cols-2">
           <div className="text-center md:text-left">
@@ -56,7 +47,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mb-6 text-sm uppercase tracking-[0.3em] text-yellow-400"
+              className="mb-6 text-sm uppercase tracking-[0.3em] text-blue-400"
             >
               Hello, I am
             </motion.p>
@@ -68,7 +59,7 @@ export default function HomePage() {
               animate="visible"
               className="text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl lg:text-7xl"
             >
-              Muhammad <span className="italic text-yellow-400">Faiq</span>
+              Muhammad <span className="italic text-blue-400">Faiq</span>
             </motion.h1>
 
             <motion.p
@@ -76,7 +67,7 @@ export default function HomePage() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mx-auto mt-8 max-w-xl text-lg text-gray-200 md:mx-0"
+              className="mx-auto mt-8 max-w-xl text-lg text-slate-200 md:mx-0"
             >
               My journey in technology began at Batam State Polytechnic, where I
               studied Informatics Engineering and developed a strong interest in
@@ -94,7 +85,7 @@ export default function HomePage() {
             >
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-yellow-400 px-8 py-4 text-sm font-semibold text-black transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-500 px-8 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 View Projects <ArrowRight size={16} />
               </Link>
@@ -115,7 +106,7 @@ export default function HomePage() {
             animate="visible"
             className="mx-auto"
           >
-            <div className="relative h-72 w-56 overflow-hidden rounded-2xl border-4 border-yellow-400/70 shadow-2xl shadow-black/40 md:h-96 md:w-72">
+            <div className="relative h-72 w-56 overflow-hidden rounded-2xl border-4 border-blue-400/70 shadow-2xl shadow-blue-400/10 md:h-96 md:w-72">
               <Image
                 src="/images/diri.jpeg"
                 alt="Portrait of Muhammad Faiq"
@@ -128,7 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-32 text-white" id="projects">
+      <section className="bg-slate-950 px-6 py-32 text-white" id="projects">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -137,11 +128,11 @@ export default function HomePage() {
             transition={{ duration: 0.7 }}
             className="mb-20 text-center"
           >
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-yellow-500">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-blue-400">
               Services
             </p>
             <h2 className="text-4xl font-bold md:text-5xl">
-              What I <span className="italic text-yellow-500">Offer</span>
+              What I <span className="italic text-blue-400">Offer</span>
             </h2>
           </motion.div>
 
@@ -156,12 +147,12 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:shadow-lg"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-200/20 transition-colors group-hover:bg-yellow-200/30">
-                  <service.icon size={24} className="text-yellow-600" />
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-400/20 transition-colors group-hover:bg-blue-400/30">
+                  <service.icon size={24} className="text-blue-400" />
                 </div>
 
                 <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-300">
+                <p className="text-sm leading-relaxed text-slate-300">
                   {service.desc}
                 </p>
               </motion.div>
@@ -170,16 +161,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-24 text-center text-white" id="contact">
+      <section className="bg-slate-950 px-6 py-24 text-center text-white" id="contact">
         <div className="mx-auto max-w-3xl">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-yellow-400/30 bg-white/5 px-6 py-10 shadow-xl shadow-black/30 md:px-10">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-blue-400/30 bg-white/5 px-6 py-10 shadow-xl shadow-blue-400/10 md:px-10">
             <h2 className="mb-4 text-4xl font-bold">Contact Me</h2>
-            <p className="mb-8 text-gray-300">
+            <p className="mb-8 text-slate-300">
               Ready to collaborate on your next web or AI project.
             </p>
             <a
               href="/kontak"
-              className="inline-block rounded-lg border border-yellow-400/50 bg-yellow-400 px-8 py-4 font-semibold text-black transition-opacity hover:opacity-90"
+              className="inline-block rounded-lg border border-blue-400/50 bg-blue-500 px-8 py-4 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Send Message
             </a>

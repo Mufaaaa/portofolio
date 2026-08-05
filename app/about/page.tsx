@@ -50,7 +50,7 @@ const techStack = {
 };
 
 const aboutBadgeClass =
-  "border-border/70 bg-background/40 px-3 py-1.5 text-xs font-medium text-muted-foreground font-body";
+  "border-blue-400/20 bg-blue-400/10 px-3 py-1.5 text-xs font-medium text-blue-100 font-body";
 
 export default function TentangPage() {
   return (
@@ -62,7 +62,7 @@ export default function TentangPage() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mb-4 text-sm uppercase tracking-[0.3em] text-primary font-body"
+            className="mb-4 text-sm uppercase tracking-[0.3em] text-blue-400 font-body"
           >
             About Me
           </motion.p>
@@ -75,7 +75,7 @@ export default function TentangPage() {
             className="text-5xl font-bold leading-tight md:text-6xl"
           >
             The Story Behind the
-            <span className="italic text-gradient-gold"> Work</span>
+            <span className="italic text-gradient-blue"> Work</span>
           </motion.h1>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function TentangPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-4 text-sm uppercase tracking-[0.3em] text-primary font-body"
+            className="mb-4 text-sm uppercase tracking-[0.3em] text-blue-400 font-body"
           >
             Skills & Expertise
           </motion.p>
@@ -177,7 +177,7 @@ export default function TentangPage() {
               className="rounded-lg border border-border/50 bg-card/50 p-6"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Code2 size={24} className="text-primary" />
+                <Code2 size={24} className="text-blue-400" />
               </div>
               <h3 className="mb-4 text-xl font-bold">Frontend</h3>
               <ul className="flex flex-wrap gap-2">
@@ -201,7 +201,7 @@ export default function TentangPage() {
               className="rounded-lg border border-border/50 bg-card/50 p-6"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Database size={24} className="text-primary" />
+                <Database size={24} className="text-blue-400" />
               </div>
               <h3 className="mb-4 text-xl font-bold">Backend</h3>
               <ul className="flex flex-wrap gap-2">
@@ -225,7 +225,7 @@ export default function TentangPage() {
               className="rounded-lg border border-border/50 bg-card/50 p-6"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Wrench size={24} className="text-primary" />
+                <Wrench size={24} className="text-blue-400" />
               </div>
               <h3 className="mb-4 text-xl font-bold">Tools & Infra</h3>
               <ul className="flex flex-wrap gap-2">
@@ -249,7 +249,7 @@ export default function TentangPage() {
               className="rounded-lg border border-border/50 bg-card/50 p-6"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Award size={24} className="text-primary" />
+                <Award size={24} className="text-blue-400" />
               </div>
               <h3 className="mb-4 text-xl font-bold">Other</h3>
               <ul className="flex flex-wrap gap-2">

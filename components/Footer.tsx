@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export function Footer() {
 	return (
-		<footer className="border-t border-amber-300/20 bg-black py-8 text-amber-200 [font-family:var(--font-poppins)]">
+		<footer className="border-t border-blue-400/20 bg-slate-950 py-8 text-slate-200 [font-family:var(--font-poppins)]">
 			<div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 text-center md:flex-row md:text-left">
 				<div>
-					<p className="text-base font-semibold text-amber-300">Mufaaaa.</p>
-					<p className="text-sm text-amber-200/80">© 2026 All rights reserved.</p>
+					<p className="text-base font-semibold text-blue-300">Mufaaaa.</p>
+					<p className="text-sm text-slate-400">© 2026 All rights reserved.</p>
 				</div>
 
 				<div className="flex items-center gap-3" aria-label="Social links">
@@ -15,7 +15,7 @@ export function Footer() {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="GitHub"
-						className="rounded-md border border-amber-300/20 p-2 text-amber-300 transition-colors hover:bg-amber-300/10 hover:text-amber-200"
+						className="rounded-md border border-blue-400/20 p-2 text-blue-300 transition-colors hover:bg-blue-400/10 hover:text-blue-200"
 					>
 						<svg
 							aria-hidden="true"
@@ -30,7 +30,7 @@ export function Footer() {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="LinkedIn"
-						className="rounded-md border border-amber-300/20 p-2 text-amber-300 transition-colors hover:bg-amber-300/10 hover:text-amber-200"
+						className="rounded-md border border-blue-400/20 p-2 text-blue-300 transition-colors hover:bg-blue-400/10 hover:text-blue-200"
 					>
 						<svg
 							aria-hidden="true"
